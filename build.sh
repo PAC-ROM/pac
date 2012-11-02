@@ -97,8 +97,6 @@ echo -e "${bldblu}Starting compilation ${txtrst}"
 brunch "pac_$DEVICE-userdebug";
 echo -e ""
 
-./vendor/pac/tools/squisher
-
 rm -f out/target/product/*/pac_*-ota-eng.*.zip
 
 # finished? get elapsed time
