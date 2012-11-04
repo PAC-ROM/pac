@@ -69,6 +69,13 @@ echo -e "${bldblu}Downloading prebuilts ${txtrst}"
 cd vendor/cm
 ./get-prebuilts
 cd ./../..
+echo -e ""
+
+# PAC device dependencies
+echo -e ""
+echo -e "${bldblu}Looking for PAC product dependencies ${txtrst}${cya}"
+./vendor/pac/tools/getdependencies.py pac_$DEVICE
+echo -e "${txtrst}"
 
 # sync with latest sources
 echo -e ""
