@@ -47,8 +47,10 @@ clear
 
 echo -e "${cya}Building ${bldgrn}P ${bldppl}A ${bldblu}C ${bldylw}v$VERSION ${txtrst}";
 
-echo -e "${cya}"
-./vendor/pac/tools/getdevicetree.py $DEVICE
+# PAC device dependencies
+echo -e ""
+echo -e "${bldblu}Looking for PAC product dependencies ${txtrst}${cya}"
+./vendor/pac/tools/getdependencies.py $DEVICE
 echo -e "${txtrst}"
 
 # decide what command to execute
@@ -70,12 +72,6 @@ cd vendor/cm
 ./get-prebuilts
 cd ./../..
 echo -e ""
-
-# PAC device dependencies
-echo -e ""
-echo -e "${bldblu}Looking for PAC product dependencies ${txtrst}${cya}"
-./vendor/pac/tools/getdependencies.py pac_$DEVICE
-echo -e "${txtrst}"
 
 # sync with latest sources
 echo -e ""
