@@ -97,7 +97,7 @@ echo -e ""
 echo -e "${bldblu}Starting compilation ${txtrst}"
 
 # start compilation
-brunch "pac_$DEVICE-userdebug";
+mka bacon
 echo -e ""
 
 rm -f out/target/product/*/pac_*-ota-eng.*.zip

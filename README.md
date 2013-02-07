@@ -5,7 +5,7 @@ Getting started
 ---------------
 First you must initialize a repository with our sources:
 
-    repo init -u git://github.com/PAC-man/android.git -b jellybean
+    repo init -u git://github.com/PAC-man/android.git -b cm-10.1
 
 Then sync it up (This will take a while, so get a cup of coffee and some snickers):
 
@@ -24,6 +24,8 @@ Now you can run our build script:
 
     ./build-pac.sh -device-
 
+example:
+    ./build-pac.sh urushi
 
 You can also use a second parameter for syncing sources before building
 
@@ -43,5 +45,3 @@ The usage is the same
 Parameters will be considered false unless you set them to true
 
 This will make a signed zip located on out/target/product/-device-.
-
-
