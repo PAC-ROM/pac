@@ -5,6 +5,9 @@ reldir=`dirname $0`
 cd $reldir
 DIR=`pwd`
 
+# get OS (linux / Mac OS x)
+OUT_TARGET_HOST=`uname -a | grep Darwin`
+
 # Colorize and add text parameters
 red=$(tput setaf 1)             #  red
 grn=$(tput setaf 2)             #  green
@@ -39,7 +42,12 @@ else
 fi
 
 # get time of startup
-res1=$(date +%s.%N)
+if [ -z "$OUT_TARGET_HOST" ]
+then
+   res1=$(date +%s.%N)
+else
+   res1=$(gdate +%s.%N)
+fi
 
 # we don't allow scrollback buffer
 echo -e '\0033\0143'
@@ -106,5 +114,11 @@ echo -e ""
 rm -f out/target/product/*/pac_*-ota-eng.*.zip
 
 # finished? get elapsed time
-res2=$(date +%s.%N)
+if [ -z "$OUT_TARGET_HOST" ]
+then
+   res2=$(date +%s.%N)
+else
+   res2=$(gdate +%s.%N)
+fi
+
 echo "${bldgrn}Total time elapsed: ${txtrst}${grn}$(echo "($res2 - $res1) / 60"|bc ) minutes ($(echo "$res2 - $res1"|bc ) seconds) ${txtrst}"
