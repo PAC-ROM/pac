@@ -100,6 +100,9 @@ echo -e "${bldblu}Starting compilation ${txtrst}"
 mka bacon
 echo -e ""
 
+# squisher
+./vendor/pac/tools/squisher
+
 rm -f out/target/product/*/pac_*-ota-eng.*.zip
 
 # finished? get elapsed time
