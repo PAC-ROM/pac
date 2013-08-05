@@ -103,6 +103,8 @@ echo -e ""
 # squisher
 ./vendor/pac/tools/squisher
 
+# cleanup unused built
+rm -f out/target/product/*/cm-*.*
 rm -f out/target/product/*/pac_*-ota-eng.*.zip
 
 # finished? get elapsed time
