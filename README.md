@@ -10,6 +10,10 @@ First you must initialize a repository with our sources:
 Then sync it up (This will take a while, so get a cup of coffee and some snickers):
 
     repo sync
+    
+To get this done faster, you can add a specified number of threads to have it download multiple items at once:
+
+    repo sync -j(put number in here without parentheses) so for example: repo sync -j25
 
 
 Building P.A.C
