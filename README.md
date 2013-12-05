@@ -5,7 +5,7 @@ Getting started
 ---------------
 First you must initialize a repository with our sources:
 
-    repo init -u git://github.com/PAC-man/android.git -b cm-10.2
+    repo init -u git://github.com/PAC-man/pacman.git -b cm-10.2
 
 Then sync it up (This will take a while, so get a cup of coffee and some snickers):
 
